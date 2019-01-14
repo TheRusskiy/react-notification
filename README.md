@@ -1,16 +1,29 @@
 # React Notification
 [![Build Status](https://travis-ci.org/pburtchaell/react-notification.svg)](https://travis-ci.org/pburtchaell/react-notification) [![npm downloads](https://img.shields.io/npm/dm/react-notification.svg?style=flat)](http://badge.fury.io/js/react-notification)
 
-React Notification provides snackbar notification messages and notification stacks. The default visual style and interaction follows [Material Design guidelines for snackbars](http://www.google.com/design/spec/components/snackbars-toasts.html#snackbars-toasts-usage) and can be fully customized.
+React Notification provides snackbar notification messages.
+
+```js
+import { Notification } from 'react-notification';
+
+<Notification
+  message="This is a notification"
+  action="Dismiss"
+  isActive={this.state.isActive}
+  onClick={() => {
+    this.setState({
+      isActive: false
+    });
+  }}
+/>
+```
+
+The default visual style and interaction follows [Material Design guidelines for snackbars](http://www.google.com/design/spec/components/snackbars-toasts.html#snackbars-toasts-usage) and can be fully customized.
 
 ## Documentation and Help
-- [Guides](/docs/guides/)
 - [Introduction](/docs/introduction.md)
+- [Guides](/docs/guides/)
 - [Examples](/examples)
-
-## Releases
-- [Releases](https://github.com/pburtchaell/react-notification/releases)
-- [Upgrading versions](/UPGRADING.md)
 
 ## Maintainers
 - [Patrick Burtchaell](http://github.com/pburtchaell)
@@ -18,6 +31,6 @@ React Notification provides snackbar notification messages and notification stac
 - [Joey Figaro](https://github.com/joeyfigaro)
 
 ## License
-Copyright (c) 2015-2018 Patrick Burtchaell. 
+[Code licensed with the MIT License (MIT)](/LICENSE).
 
-[Licensed with The MIT License (MIT)](https://raw.githubusercontent.com/pburtchaell/react-notification/master/LICENSE).
+[Documentation licensed with the CC BY-NC License](https://creativecommons.org/licenses/by-nc/4.0/).
